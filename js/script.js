@@ -1,12 +1,3 @@
-// Mobile Navigation
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('active'); // Optional: for styling the hamburger itself (e.g., turn into 'X')
-});
-
 // Smooth Scrolling for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -19,7 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
             // Close mobile menu if open
             if (window.innerWidth <= 768) {
-                navLinks.style.display = 'none';
+                navLinks.style.display = 'none'; // Note: This might conflict with the class-based toggle, let's address if needed.
             }
         }
     });
