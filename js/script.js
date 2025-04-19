@@ -3,7 +3,8 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active'); // Optional: for styling the hamburger itself (e.g., turn into 'X')
 });
 
 // Smooth Scrolling for Navigation Links
@@ -92,4 +93,53 @@ window.addEventListener('scroll', () => {
     }
     
     lastScroll = currentScroll;
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active'); // Optional: for styling the hamburger itself (e.g., turn into 'X')
+        });
+    }
+
+    // Optional: Close menu when a link is clicked (useful for single-page apps or long pages)
+    const navLinkItems = document.querySelectorAll('.nav-links a');
+    navLinkItems.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    });
+
+    // Add simple fade-in animation to sections on scroll (optional enhancement)
+    const sections = document.querySelectorAll('section');
+    const options = {
+        threshold: 0.1, // Trigger when 10% of the section is visible
+        rootMargin: "0px 0px -50px 0px" // Start animation slightly before section enters viewport
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                // Optional: Unobserve after animation 
+                // observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    sections.forEach(section => {
+        // Initial state for animation
+        section.style.opacity = '0';
+        section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        section.style.transform = 'translateY(20px)';
+        observer.observe(section);
+    });
 }); 
