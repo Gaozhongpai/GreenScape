@@ -93,13 +93,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelector('.nav-links');
     
     if (hamburger && navLinks) {
+        // Add click event to hamburger
         hamburger.addEventListener('click', function() {
-            // Toggle the active class on both elements
+            // Toggle active class
             navLinks.classList.toggle('active');
             hamburger.classList.toggle('active');
             
-            // Log to console for debugging
-            console.log('Hamburger clicked, navLinks active:', navLinks.classList.contains('active'));
+            // For debugging
+            console.log('Hamburger clicked');
+            console.log('Nav links active:', navLinks.classList.contains('active'));
         });
         
         // Close menu when a link is clicked
@@ -120,21 +122,4 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Form submitted');
         });
     }
-    
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
 }); 
