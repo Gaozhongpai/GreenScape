@@ -385,10 +385,13 @@ nav {
     margin-top: var(--spacing-lg);
 }
 
-/* Contact Section */
 .contact {
     padding: var(--spacing-xl) var(--spacing-sm);
-    background-color: var(--light-bg);
+}
+
+.contact h1.section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
 }
 
 .contact h2 {
@@ -713,47 +716,6 @@ footer {
 }
 
 /* Contact Page Styles */
-.contact {
-    padding: var(--spacing-xl) var(--spacing-sm);
-    margin-top: 80px;
-}
-
-.contact h1 {
-    text-align: center;
-    margin-bottom: var(--spacing-lg);
-}
-
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
-    max-width: var(--container-max-width);
-    margin: 0 auto;
-}
-
-.contact-info h2 {
-    margin-bottom: var(--spacing-sm);
-}
-
-.contact-details {
-    margin-top: var(--spacing-lg);
-}
-
-.contact-item {
-    display: flex;
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-md);
-}
-
-.contact-item i {
-    font-size: var(--font-size-h3);
-    color: var(--primary-color);
-}
-
-.contact-item h3 {
-    margin-bottom: var(--spacing-xs);
-}
-
 .contact-form {
     background: var(--white);
     padding: var(--spacing-lg);
@@ -853,6 +815,14 @@ footer {
     margin: 0 auto;
 }
 
+.gallery .portfolio-item h3 {
+    color: var(--white);
+}
+
+.gallery .service-card h3 {
+    color: var(--white);
+}
+
 /* Services Page Styles */
 .services-page {
     padding: var(--spacing-xl) var(--spacing-sm);
@@ -928,4 +898,9 @@ footer {
 .section-title {
     margin: 3rem 0;
     text-align: center;
+}
+
+.portfolio-overlay h3 {
+    color: var(--white);
+    margin-bottom: var(--spacing-xs);
 } 
