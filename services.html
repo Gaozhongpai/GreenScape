@@ -3,82 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our comprehensive landscaping services including landscape design, garden maintenance, irrigation systems, and expert plant selection.">
     <title>Our Services - Jacob's Landscaping Inc</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <img src="images/logo.png" alt="Jacob's Landscaping Inc Logo">
-                Jacob's Landscaping Inc
-            </div>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Jacob's Landscaping Inc Logo" width="40" height="40">
+                <span>Jacob's Landscaping Inc</span>
+            </a>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="services.html" aria-current="page">Services</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </nav>
     </header>
 
-    <section class="services">
-        <h2>Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <img src="images/service1.jpg" alt="Landscape Design">
-                <h3>Landscape Design</h3>
-                <p>Custom landscape designs tailored to your vision and space. We create detailed plans that incorporate your preferences while ensuring optimal functionality and aesthetics.</p>
-                <ul>
-                    <li>Site analysis and planning</li>
-                    <li>3D design visualization</li>
-                    <li>Plant selection and placement</li>
-                    <li>Hardscape integration</li>
-                </ul>
+    <main>
+        <section class="services">
+            <h1 class="section-title">Our Services</h1>
+            <div class="services-grid">
+                <div class="service-card" data-animate>
+                    <img src="images/service1.jpg" alt="Landscape Design" width="300" height="200" loading="lazy">
+                    <h3>Landscape Design</h3>
+                    <p>Custom landscape designs tailored to your vision and space. We create detailed plans that incorporate your preferences while ensuring optimal functionality and aesthetics.</p>
+                    <ul>
+                        <li>Site analysis and planning</li>
+                        <li>3D design visualization</li>
+                        <li>Plant selection and placement</li>
+                        <li>Hardscape integration</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-animate>
+                    <img src="images/service2.jpg" alt="Garden Maintenance" width="300" height="200" loading="lazy">
+                    <h3>Garden Maintenance</h3>
+                    <p>Regular maintenance to keep your garden looking its best throughout the year. Our comprehensive maintenance services ensure your landscape stays healthy and beautiful.</p>
+                    <ul>
+                        <li>Regular pruning and trimming</li>
+                        <li>Weed control</li>
+                        <li>Fertilization and soil care</li>
+                        <li>Seasonal cleanup</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-animate>
+                    <img src="images/service3.jpg" alt="Irrigation Systems" width="300" height="200" loading="lazy">
+                    <h3>Irrigation Systems</h3>
+                    <p>Smart irrigation solutions for efficient water management. We design and install automated systems that keep your plants healthy while conserving water.</p>
+                    <ul>
+                        <li>System design and installation</li>
+                        <li>Smart controller integration</li>
+                        <li>Regular maintenance</li>
+                        <li>Water conservation solutions</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-animate>
+                    <img src="images/service4.jpg" alt="Plant Selection" width="300" height="200" loading="lazy">
+                    <h3>Plant Selection</h3>
+                    <p>Expert guidance in choosing the perfect plants for your space. We consider clima(555) 123-4567tions, and maintenance requirements to ensure long-term sinfo@greenscapepro.com<ul>
+                        <li>Native plant recommendations</li>
+                        <li>Drought-resistant options</li>
+                        <li>Seasonal color planning</li>
+                        <li>Plant health monitoring</li>
+                    </ul>
+                </div>
             </div>
-            <div class="service-card">
-                <img src="images/service2.jpg" alt="Garden Maintenance">
-                <h3>Garden Maintenance</h3>
-                <p>Regular maintenance to keep your garden looking its best throughout the year. Our comprehensive maintenance services ensure your landscape stays healthy and beautiful.</p>
-                <ul>
-                    <li>Regular pruning and trimming</li>
-                    <li>Weed control</li>
-                    <li>Fertilization and soil care</li>
-                    <li>Seasonal cleanup</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <img src="images/service3.jpg" alt="Irrigation Systems">
-                <h3>Irrigation Systems</h3>
-                <p>Smart irrigation solutions for efficient water management. We design and install automated systems that keep your plants healthy while conserving water.</p>
-                <ul>
-                    <li>System design and installation</li>
-                    <li>Smart controller integration</li>
-                    <li>Regular maintenance</li>
-                    <li>Water conservation solutions</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <img src="images/service4.jpg" alt="Plant Selection">
-                <h3>Plant Selection</h3>
-                <p>Expert guidance in choosing the perfect plants for your space. We consider climate, soil conditions, and maintenance requirements to ensure long-term success.</p>
-                <ul>
-                    <li>Native plant recommendations</li>
-                    <li>Drought-resistant options</li>
-                    <li>Seasonal color planning</li>
-                    <li>Plant health monitoring</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-content">
@@ -88,15 +91,15 @@
             </div>
             <div class="footer-section">
                 <h3>Contact Info</h3>
-                <p><i class="fas fa-phone"></i> (781) 888-4413</p>
-                <p><i class="fas fa-envelope"></i> jacobslandscapinginc781@gmail.com</p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:7818884413">(781) 888-4413</a></p>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:jacobslandscapinginc781@gmail.com">jacobslandscapinginc781@gmail.com</a></p>
             </div>
             <div class="footer-section">
                 <h3>Follow Us</h3>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -105,6 +108,6 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html> 

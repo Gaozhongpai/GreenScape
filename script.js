@@ -3,7 +3,16 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+    }
 });
 
 // Smooth Scrolling for Navigation Links
@@ -17,77 +26,109 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 block: 'start'
             });
             // Close mobile menu if open
-            if (window.innerWidth <= 768) {
-                navLinks.style.display = 'none';
-            }
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
         }
     });
 });
 
-// Form Submission
+// Form Submission with validation
 const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        message: document.getElementById('message').value
-    };
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Basic form validation
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const message = document.getElementById('message').value.trim();
+        
+        if (!name || !email || !message) {
+            alert('Please fill in all required fields');
+            return;
+        }
+        
+        if (!isValidEmail(email)) {
+            alert('Please enter a valid email address');
+            return;
+        }
 
-    // Here you would typically send the form data to a server
-    // For now, we'll just show a success message
-    alert('Thank you for your message! We will get back to you soon.');
-    contactForm.reset();
-});
+        try {
+            const formData = new FormData(this);
+            const response = await fetch('process_form.php', {
+                method: 'POST',
+                body: formData
+            });
+            
+            if (response.ok) {
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            alert('Sorry, there was an error submitting your form. Please try again later.');
+            console.error('Form submission error:', error);
+        }
+    });
+}
 
-// Scroll Animation for Elements
+// Email validation helper
+function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+// Optimized Scroll Animation
 const observerOptions = {
     root: null,
-    rootMargin: '0px',
+    rootMargin: '50px',
     threshold: 0.1
 };
 
-const observer = new IntersectionObserver((entries, observer) => {
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('visible');
             observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
-// Animate service cards and portfolio items
-document.querySelectorAll('.service-card, .portfolio-item').forEach(element => {
-    element.style.opacity = '0';
-    element.style.transform = 'translateY(20px)';
-    element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+// Animate elements with data-animate attribute
+document.querySelectorAll('[data-animate]').forEach(element => {
     observer.observe(element);
 });
 
-// Header Scroll Effect
+// Optimized Header Scroll Effect
 const header = document.querySelector('header');
 let lastScroll = 0;
+let scrollTimeout;
 
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll <= 0) {
-        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-        return;
+    if (scrollTimeout) {
+        window.cancelAnimationFrame(scrollTimeout);
     }
     
-    if (currentScroll > lastScroll) {
-        // Scrolling down
-        header.style.transform = 'translateY(-100%)';
-    } else {
-        // Scrolling up
-        header.style.transform = 'translateY(0)';
-        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-    }
-    
-    lastScroll = currentScroll;
+    scrollTimeout = window.requestAnimationFrame(() => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll <= 0) {
+            header.classList.remove('header-hidden');
+            header.classList.add('header-visible');
+            return;
+        }
+        
+        if (currentScroll > lastScroll && currentScroll > 100) {
+            // Scrolling down
+            header.classList.add('header-hidden');
+            header.classList.remove('header-visible');
+        } else {
+            // Scrolling up
+            header.classList.remove('header-hidden');
+            header.classList.add('header-visible');
+        }
+        
+        lastScroll = currentScroll;
+    });
 }); 

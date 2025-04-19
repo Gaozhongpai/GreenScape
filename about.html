@@ -3,55 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Jacob's Landscaping Inc. Our experienced team has been creating beautiful outdoor spaces since 2010.">
     <title>About Us - Jacob's Landscaping Inc</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <img src="images/logo.png" alt="Jacob's Landscaping Inc Logo">
-                Jacob's Landscaping Inc
-            </div>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Jacob's Landscaping Inc Logo" width="40" height="40">
+                <span>Jacob's Landscaping Inc</span>
+            </a>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </nav>
     </header>
 
-    <section class="about-section">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>Our Story</h2>
-                <p>Welcome to Jacob's Landscaping Inc, where we transform outdoor spaces into beautiful, functional environments. Founded in 2010, our company has been dedicated to creating stunning landscapes that enhance the beauty and value of your property.</p>
-                <p>Our team of experienced professionals brings together years of expertise in landscape design, horticulture, and construction. We believe that every outdoor space has the potential to become something extraordinary.</p>
-                <h3>Our Mission</h3>
-                <p>To provide exceptional landscaping services that exceed our clients' expectations, while maintaining the highest standards of quality and environmental responsibility.</p>
-                <h3>Our Values</h3>
-                <ul>
-                    <li>Quality craftsmanship in every project</li>
-                    <li>Environmental sustainability</li>
-                    <li>Customer satisfaction</li>
-                    <li>Professional integrity</li>
-                    <li>Continuous innovation</li>
-                </ul>
+    <main>
+        <section class="about-section">
+            <div class="about-content">
+                <div class="about-text">
+                    <h1>About Us</h1>
+                    <p>Since 2010, Jacob's Landscaping Inc has been transforming outdoor spaces into beautiful, functional environments. Our passion for landscaping and commitment to quality has made us a trusted name in the industry.</p>
+                    <p>We believe that every outdoor space has the potential to become something extraordinary. Our team of experienced professionals works closely with clients to understand their vision and bring it to life.</p>
+                    <h2>Our Mission</h2>
+                    <p>To create stunning outdoor environments that enhance the beauty and value of your property while providing exceptional service and sustainable landscaping solutions.</p>
+                    <h2>Our Values</h2>
+                    <ul>
+                        <li>Quality craftsmanship in every project</li>
+                        <li>Environmental responsibility</li>
+                        <li>Customer satisfaction</li>
+                        <li>Professional expertise</li>
+                        <li>Innovative design solutions</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="images/about-image.jpg" alt="Our team at work" width="600" height="400" loading="lazy">
+                </div>
             </div>
-            <div class="about-image">
-                <img src="images/about-image.jpg" alt="Our Team at Work">
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-content">
@@ -61,15 +65,15 @@
             </div>
             <div class="footer-section">
                 <h3>Contact Info</h3>
-                <p><i class="fas fa-phone"></i> (781) 888-4413</p>
-                <p><i class="fas fa-envelope"></i> jacobslandscapinginc781@gmail.com</p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:7818884413">(781) 888-4413</a></p>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:jacobslandscapinginc781@gmail.com">jacobslandscapinginc781@gmail.com</a></p>
             </div>
             <div class="footer-section">
                 <h3>Follow Us</h3>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -78,6 +82,6 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html> 
