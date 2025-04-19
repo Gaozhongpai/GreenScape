@@ -8,8 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST["message"];
     
     // **Important:** Replace with your actual email address
-    $to = "info@greenscapepro.com"; 
-    $subject = "New Contact Form Submission from GreenScape Pro Website";
+    $to = "jacobslandscapinginc781@gmail.com"; 
+    $subject = "New Contact Form Submission from Jacob's Landscaping Inc Website";
     
     // Construct email body
     $body = "You have received a new message from your website contact form.\n\n";
