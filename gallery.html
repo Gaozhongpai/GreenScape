@@ -9,6 +9,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        /* Gallery grid layout */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        @media (max-width: 1200px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -36,47 +62,75 @@
         <section class="portfolio">
             <h2 class="section-title">Our Projects</h2>
             <div class="portfolio-grid">
+                <!-- Gallery images without descriptions -->
                 <div class="portfolio-item" data-animate>
-                    <img src="images/gallery1.jpg" alt="Residential Garden" width="400" height="300" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Residential Garden</h3>
-                        <p>A beautiful backyard transformation with native plants and water features</p>
-                    </div>
+                    <img src="images/gallery/gallery1.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
                 </div>
                 <div class="portfolio-item" data-animate>
-                    <img src="images/gallery2.jpg" alt="Commercial Landscape" width="400" height="300" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Commercial Landscape</h3>
-                        <p>Modern office complex landscaping with sustainable irrigation</p>
-                    </div>
+                    <img src="images/gallery/gallery2.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
                 </div>
                 <div class="portfolio-item" data-animate>
-                    <img src="images/gallery3.jpg" alt="Garden Design" width="400" height="300" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Garden Design</h3>
-                        <p>Elegant garden design with seasonal color planning</p>
-                    </div>
+                    <img src="images/gallery/gallery3.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
                 </div>
                 <div class="portfolio-item" data-animate>
-                    <img src="images/gallery4.jpg" alt="Hardscape Project" width="400" height="300" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Hardscape Project</h3>
-                        <p>Custom stone pathways and retaining walls</p>
-                    </div>
+                    <img src="images/gallery/gallery4.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
                 </div>
                 <div class="portfolio-item" data-animate>
-                    <img src="images/gallery5.jpg" alt="Water Feature" width="400" height="300" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Water Feature</h3>
-                        <p>Peaceful pond with aquatic plants and fish</p>
-                    </div>
+                    <img src="images/gallery/gallery5.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
                 </div>
                 <div class="portfolio-item" data-animate>
-                    <img src="images/gallery6.jpg" alt="Drought-Resistant Garden" width="400" height="300" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Drought-Resistant Garden</h3>
-                        <p>Sustainable landscaping with native plants</p>
-                    </div>
+                    <img src="images/gallery/gallery6.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery7.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery8.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery9.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery10.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery11.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery12.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery13.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery14.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery15.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery16.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery17.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery18.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery19.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery20.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery21.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery22.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery23.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
                 </div>
             </div>
         </section>

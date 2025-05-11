@@ -9,6 +9,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        /* 3x2 grid layout for services section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 2rem;
+        }
+        
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -36,47 +58,70 @@
         <section class="services">
             <h1 class="section-title">Our Services</h1>
             <div class="services-grid">
-                <div class="service-card" data-animate>
+                <div class="service-card" data-animate id="landscape-design">
                     <img src="images/service1.jpg" alt="Landscape Design" width="300" height="200" loading="lazy">
                     <h3>Landscape Design</h3>
-                    <p>Custom landscape designs tailored to your vision and space. We create detailed plans that orporate your preferences while ensuring optimal functionality and aesthetics.</p>
+                    <p>Transform your property with expertly crafted landscape designs that reflect your style and maximize your outdoor space. Our personalized approach ensures a landscape that's both beautiful and practical.</p>
                     <ul>
-                        <li>Site analysis and planning</li>
-                        <li>3D design visualization</li>
-                        <li>Plant selection and placement</li>
-                        <li>Hardscape integration</li>
+                        <li>Professional site evaluation and needs assessment</li>
+                        <li>Personalized design concepts and detailed plans</li>
+                        <li>Strategic plant selection for year-round beauty</li>
+                        <li>Seamless integration of landscape and hardscape elements</li>
                     </ul>
                 </div>
-                <div class="service-card" data-animate>
-                    <img src="images/service2.jpg" alt="Garden Maintenance" width="300" height="200" loading="lazy">
-                    <h3>Garden Maintenance</h3>
-                    <p>Regular maintenance to keep your garden looking its best throughout the year. Our comprehensive maintenance services ensure your landscape stays healthy and beautiful.</p>
+                <div class="service-card" data-animate id="property-maintenance">
+                    <img src="images/service2.jpg" alt="Property Maintenance" width="300" height="200" loading="lazy">
+                    <h3>Property Maintenance</h3>
+                    <p>Preserve the beauty and health of your landscape with our professional maintenance services. We offer customized care programs that keep your property looking its best in every season.</p>
                     <ul>
-                        <li>Regular pruning and trimming</li>
-                        <li>Weed control</li>
-                        <li>Fertilization and soil care</li>
-                        <li>Seasonal cleanup</li>
+                        <li>Comprehensive spring and fall property cleanups</li>
+                        <li>Expert pruning to enhance plant health and appearance</li>
+                        <li>Premium mulch application to improve soil health</li>
+                        <li>Customized fertilization schedules for optimal growth</li>
                     </ul>
                 </div>
-                <div class="service-card" data-animate>
-                    <img src="images/service3.jpg" alt="Irrigation Systems" width="300" height="200" loading="lazy">
+                <div class="service-card" data-animate id="hardscapes">
+                    <img src="images/service3.jpg" alt="Hardscapes" width="300" height="200" loading="lazy">
+                    <h3>Hardscapes</h3>
+                    <p>Add structure and functionality to your landscape with our premium services. We design and build durable, elegant hardscape elements that enhance your outdoor living space and property value.</p>
+                    <ul>
+                        <li>Custom patio designs using premium materials</li>
+                        <li>Engineered retaining walls for both function and beauty</li>
+                        <li>Decorative stone features and natural stonework</li>
+                        <li>Integrated outdoor living spaces with multiple elements</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-animate id="lawn-care">
+                    <img src="images/service4.jpg" alt="Lawn Care" width="300" height="200" loading="lazy">
+                    <h3>Lawn Care</h3>
+                    <p>Achieve a healthy, vibrant lawn that enhances your entire property. Our science-based lawn care programs address your lawn's specific needs while using responsible practices for optimal results.</p>
+                    <ul>
+                        <li>Precision mowing with professional equipment</li>
+                        <li>Balanced fertilization and targeted weed management</li>
+                        <li>Core aeration and overseeding for thicker lawns</li>
+                        <li>Complete lawn installation and renovation services</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-animate id="irrigation">
+                    <img src="images/service5.jpg" alt="Irrigation Systems" width="300" height="200" loading="lazy">
                     <h3>Irrigation Systems</h3>
-                    <p>Smart irrigation solutions for efficient water management. We design and install automated systems that keep your plants healthy while conserving water.</p>
+                    <p>Ensure your landscape thrives while conserving water with our efficient irrigation solutions. We design, install and maintain systems that deliver precise watering tailored to your landscape's needs.</p>
                     <ul>
-                        <li>System design and installation</li>
-                        <li>Smart controller integration</li>
-                        <li>Regular maintenance</li>
-                        <li>Water conservation solutions</li>
+                        <li>Custom irrigation design for optimal coverage</li>
+                        <li>Weather-responsive controllers for efficient watering</li>
+                        <li>Seasonal system maintenance and adjustments</li>
+                        <li>Water-saving technology and sustainable practices</li>
                     </ul>
                 </div>
-                <div class="service-card" data-animate>
-                    <img src="images/service4.jpg" alt="Plant Selection" width="300" height="200" loading="lazy">
-                    <h3>Plant Selection</h3>
-                    <p>Expert guidance in choosing the perfect plants for your space. We consider clima(555) 123-4567tions, and maintenance requirements to ensure long-term sinfo@greenscapepro.com<ul>
-                        <li>Native plant recommendations</li>
-                        <li>Drought-resistant options</li>
-                        <li>Seasonal color planning</li>
-                        <li>Plant health monitoring</li>
+                <div class="service-card" data-animate id="other-services">
+                    <img src="images/service6.jpg" alt="Other Services" width="300" height="200" loading="lazy">
+                    <h3>Other Services</h3>
+                    <p>Enhance your outdoor lifestyle with our specialty landscape services. From outdoor entertaining spaces to decorative features, we can help you create a complete outdoor environment.</p>
+                    <ul>
+                        <li>Outdoor Kitchens - Customized cooking and entertainment spaces</li>
+                        <li>Landscape Lighting - Strategically placed fixtures for beauty and security</li>
+                        <li>Water Features - Soothing fountains and decorative water elements</li>
+                        <li>Special Projects - Innovative solutions for unique landscape challenges</li>
                     </ul>
                 </div>
             </div>

@@ -9,6 +9,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        /* 3x2 grid layout for services section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 2rem;
+        }
+        
+        /* 4x2 grid layout for portfolio section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        @media (max-width: 1200px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid,
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -51,22 +91,34 @@
                     <a href="services.html#landscape-design" class="service-link">Learn More</a>
                 </div>
                 <div class="service-card" data-animate>
-                    <img src="images/service2.jpg" alt="Garden Maintenance" width="300" height="200" loading="lazy">
-                    <h3>Garden Maintenance</h3>
-                    <p>Regular maintenance to keep your garden looking its best</p>
-                    <a href="services.html#garden-maintenance" class="service-link">Learn More</a>
+                    <img src="images/service2.jpg" alt="Property Maintenance" width="300" height="200" loading="lazy">
+                    <h3>Property Maintenance</h3>
+                    <p>Comprehensive maintenance services to keep your landscape pristine</p>
+                    <a href="services.html#property-maintenance" class="service-link">Learn More</a>
                 </div>
                 <div class="service-card" data-animate>
-                    <img src="images/service3.jpg" alt="Irrigation Systems" width="300" height="200" loading="lazy">
+                    <img src="images/service3.jpg" alt="Hardscapes" width="300" height="200" loading="lazy">
+                    <h3>Hardscapes</h3>
+                    <p>Beautiful patios, walkways, and retaining walls to enhance your outdoor space</p>
+                    <a href="services.html#hardscapes" class="service-link">Learn More</a>
+                </div>
+                <div class="service-card" data-animate>
+                    <img src="images/service4.jpg" alt="Lawn Care" width="300" height="200" loading="lazy">
+                    <h3>Lawn Care</h3>
+                    <p>Expert lawn maintenance, fertilization, and renovation services</p>
+                    <a href="services.html#lawn-care" class="service-link">Learn More</a>
+                </div>
+                <div class="service-card" data-animate>
+                    <img src="images/service5.jpg" alt="Irrigation Systems" width="300" height="200" loading="lazy">
                     <h3>Irrigation Systems</h3>
                     <p>Smart irrigation solutions for efficient water management</p>
                     <a href="services.html#irrigation" class="service-link">Learn More</a>
                 </div>
                 <div class="service-card" data-animate>
-                    <img src="images/service4.jpg" alt="Plant Selection" width="300" height="200" loading="lazy">
-                    <h3>Plant Selection</h3>
-                    <p>Expert guidance in choosing the perfect plants for your space</p>
-                    <a href="services.html#plant-selection" class="service-link">Learn More</a>
+                    <img src="images/service6.jpg" alt="Other Services" width="300" height="200" loading="lazy">
+                    <h3>Other Services</h3>
+                    <p>Including outdoor kitchens, landscape lighting, pools and water features</p>
+                    <a href="services.html#other-services" class="service-link">Learn More</a>
                 </div>
             </div>
         </section>
@@ -74,26 +126,30 @@
         <section id="portfolio" class="portfolio">
             <h2>Featured Projects</h2>
             <div class="portfolio-grid">
+                <!-- Display gallery images without descriptions -->
                 <div class="portfolio-item" data-animate>
-                    <img src="images/gallery1.jpg" alt="Residential Garden" width="400" height="300" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Residential Garden</h3>
-                        <p>A beautiful backyard transformation</p>
-                    </div>
+                    <img src="images/gallery/gallery1.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
                 </div>
                 <div class="portfolio-item" data-animate>
-                    <img src="images/gallery2.jpg" alt="Commercial Landscape" width="400" height="300" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Commercial Landscape</h3>
-                        <p>Modern office complex landscaping</p>
-                    </div>
+                    <img src="images/gallery/gallery2.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
                 </div>
                 <div class="portfolio-item" data-animate>
-                    <img src="images/gallery3.jpg" alt="Garden Design" width="400" height="300" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Garden Design</h3>
-                        <p>Elegant garden design with seasonal colors</p>
-                    </div>
+                    <img src="images/gallery/gallery3.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery4.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery5.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery6.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery7.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery8.jpg" alt="Landscaping Project" width="400" height="300" loading="lazy">
                 </div>
             </div>
             <div class="portfolio-cta">
