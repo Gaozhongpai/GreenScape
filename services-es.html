@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore nuestros servicios completos de paisajismo que incluyen diseño de paisajes, mantenimiento de jardines, sistemas de riego y selección experta de plantas.">
+    <title>Nuestros Servicios - Jacob's Landscaping</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        /* 3x2 grid layout for services section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 2rem;
+        }
+        
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index-es.html" class="logo">
+                <img src="images/logo.png" alt="Logo de Jacob's Landscaping" width="40" height="40">
+                <span>Jacob's Landscaping</span>
+            </a>
+            <button class="hamburger" aria-label="Alternar menú de navegación" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index-es.html">Inicio</a></li>
+                <li><a href="about-es.html">Nosotros</a></li>
+                <li><a href="services-es.html" aria-current="page">Servicios</a></li>
+                <li><a href="gallery-es.html">Galería</a></li>
+                <li><a href="contact-es.html">Contacto</a></li>
+                <li><button class="language-toggle"><i class="fas fa-globe"></i>English</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="services">
+            <h1 class="section-title">Nuestros Servicios</h1>
+            <div class="services-grid">
+                <div class="service-card" data-animate id="landscape-design">
+                    <img src="images/service1.jpg" alt="Diseño de Paisajes" width="300" height="200" loading="lazy">
+                    <h3>Diseño de Paisajes</h3>
+                    <p>Transforme su propiedad con diseños de paisaje expertos que reflejan su estilo y maximizan su espacio exterior. Nuestro enfoque personalizado garantiza un paisaje que es tanto hermoso como práctico.</p>
+                    <ul>
+                        <li>Evaluación profesional del sitio y valoración de necesidades</li>
+                        <li>Conceptos y planes detallados de diseño personalizados</li>
+                        <li>Selección estratégica de plantas para belleza durante todo el año</li>
+                        <li>Integración perfecta de elementos de paisaje y elementos duros</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-animate id="property-maintenance">
+                    <img src="images/service2.jpg" alt="Mantenimiento de Propiedades" width="300" height="200" loading="lazy">
+                    <h3>Mantenimiento de Propiedades</h3>
+                    <p>Preserve la belleza y salud de su paisaje con nuestros servicios de mantenimiento profesional. Ofrecemos programas de cuidado personalizados que mantienen su propiedad luciendo lo mejor en cada temporada.</p>
+                    <ul>
+                        <li>Limpiezas integrales de propiedad en primavera y otoño</li>
+                        <li>Poda experta para mejorar la salud y apariencia de las plantas</li>
+                        <li>Aplicación de mantillo premium para mejorar la salud del suelo</li>
+                        <li>Programas de fertilización personalizados para un crecimiento óptimo</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-animate id="hardscapes">
+                    <img src="images/service3.jpg" alt="Elementos Duros" width="300" height="200" loading="lazy">
+                    <h3>Elementos Duros</h3>
+                    <p>Añada estructura y funcionalidad a su paisaje con nuestros servicios premium. Diseñamos y construimos elementos duros elegantes y duraderos que mejoran su espacio de vida al aire libre y el valor de su propiedad.</p>
+                    <ul>
+                        <li>Diseños de patios personalizados utilizando materiales premium</li>
+                        <li>Muros de contención diseñados tanto para función como belleza</li>
+                        <li>Características decorativas de piedra y trabajos en piedra natural</li>
+                        <li>Espacios integrados de vida al aire libre con múltiples elementos</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-animate id="lawn-care">
+                    <img src="images/service4.jpg" alt="Cuidado del Césped" width="300" height="200" loading="lazy">
+                    <h3>Cuidado del Césped</h3>
+                    <p>Logre un césped saludable y vibrante que realce toda su propiedad. Nuestros programas de cuidado del césped basados en la ciencia abordan las necesidades específicas de su césped mientras utilizan prácticas responsables para resultados óptimos.</p>
+                    <ul>
+                        <li>Corte de precisión con equipo profesional</li>
+                        <li>Fertilización balanceada y gestión focalizada de malezas</li>
+                        <li>Aireación central y resiembra para céspedes más densos</li>
+                        <li>Servicios completos de instalación y renovación de césped</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-animate id="irrigation">
+                    <img src="images/service5.jpg" alt="Sistemas de Riego" width="300" height="200" loading="lazy">
+                    <h3>Sistemas de Riego</h3>
+                    <p>Asegure que su paisaje prospere mientras conserva agua con nuestras soluciones eficientes de riego. Diseñamos, instalamos y mantenemos sistemas que proporcionan un riego preciso adaptado a las necesidades de su paisaje.</p>
+                    <ul>
+                        <li>Diseño personalizado de riego para una cobertura óptima</li>
+                        <li>Controladores sensibles al clima para un riego eficiente</li>
+                        <li>Mantenimiento y ajustes estacionales del sistema</li>
+                        <li>Tecnología de ahorro de agua y prácticas sostenibles</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-animate id="other-services">
+                    <img src="images/service6.jpg" alt="Otros Servicios" width="300" height="200" loading="lazy">
+                    <h3>Otros Servicios</h3>
+                    <p>Mejore su estilo de vida al aire libre con nuestros servicios especializados de paisajismo. Desde espacios para entretenimiento al aire libre hasta características decorativas, podemos ayudarle a crear un ambiente exterior completo.</p>
+                    <ul>
+                        <li>Cocinas Exteriores - Espacios personalizados para cocinar y entretenimiento</li>
+                        <li>Iluminación de Paisajes - Accesorios estratégicamente ubicados para belleza y seguridad</li>
+                        <li>Características Acuáticas - Fuentes relajantes y elementos decorativos de agua</li>
+                        <li>Proyectos Especiales - Soluciones innovadoras para desafíos únicos de paisajismo</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Jacob's Landscaping</h3>
+                <p>Experiencia profesional en paisajismo desde 2015</p>
+            </div>
+            <div class="footer-section">
+                <h3>Información de Contacto</h3>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:7818884413">(781) 888-4413</a></p>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@jacobs-landscaping.com">info@jacobs-landscaping.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61561365051942" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Jacob's Landscaping. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+    <script src="js/language-switcher.js" defer></script>
+</body>
+</html> 

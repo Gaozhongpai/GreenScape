@@ -903,4 +903,36 @@ footer {
 .portfolio-overlay h3 {
     color: var(--white);
     margin-bottom: var(--spacing-xs);
+}
+
+/* Language Switcher Styles */
+.language-toggle {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 15px;
+    padding: 5px 10px;
+    background-color: transparent;
+    border: 1px solid #4a8b2c;
+    border-radius: 4px;
+    color: #4a8b2c;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-toggle:hover {
+    background-color: #4a8b2c;
+    color: white;
+}
+
+.language-toggle i {
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .language-toggle {
+        margin-left: 10px;
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
 } 

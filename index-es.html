@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicios profesionales de paisajismo por Jacob's Landscaping. Transforme su espacio exterior con nuestro diseño experto de paisajes, mantenimiento de jardines y servicios de riego.">
+    <title>Jacob's Landscaping - Servicios Profesionales de Paisajismo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        /* 3x2 grid layout for services section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 2rem;
+        }
+        
+        /* 4x2 grid layout for portfolio section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        @media (max-width: 1200px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid,
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index-es.html" class="logo">
+                <img src="images/logo.png" alt="Logo de Jacob's Landscaping" width="40" height="40">
+                <span>Jacob's Landscaping</span>
+            </a>
+            <button class="hamburger" aria-label="Alternar menú de navegación" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index-es.html" aria-current="page">Inicio</a></li>
+                <li><a href="about-es.html">Nosotros</a></li>
+                <li><a href="services-es.html">Servicios</a></li>
+                <li><a href="gallery-es.html">Galería</a></li>
+                <li><a href="contact-es.html">Contacto</a></li>
+                <li><button class="language-toggle"><i class="fas fa-globe"></i>English</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Transforme Su Espacio Exterior</h1>
+                <p>Servicios profesionales de paisajismo para transformaciones completas al aire libre</p>
+                <a href="contact-es.html" class="cta-button">Obtener Presupuesto Gratis</a>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card" data-animate>
+                    <img src="images/service1.jpg" alt="Diseño de Paisajes" width="300" height="200" loading="lazy">
+                    <h3>Diseño de Paisajes</h3>
+                    <p>Diseños de paisajes personalizados adaptados a su visión y espacio</p>
+                    <a href="services-es.html#landscape-design" class="service-link">Más Información</a>
+                </div>
+                <div class="service-card" data-animate>
+                    <img src="images/service2.jpg" alt="Mantenimiento de Propiedades" width="300" height="200" loading="lazy">
+                    <h3>Mantenimiento de Propiedades</h3>
+                    <p>Servicios de mantenimiento integral para mantener su paisaje en perfecto estado</p>
+                    <a href="services-es.html#property-maintenance" class="service-link">Más Información</a>
+                </div>
+                <div class="service-card" data-animate>
+                    <img src="images/service3.jpg" alt="Elementos Duros" width="300" height="200" loading="lazy">
+                    <h3>Elementos Duros</h3>
+                    <p>Hermosos patios, caminos y muros de contención para mejorar su espacio exterior</p>
+                    <a href="services-es.html#hardscapes" class="service-link">Más Información</a>
+                </div>
+                <div class="service-card" data-animate>
+                    <img src="images/service4.jpg" alt="Cuidado del Césped" width="300" height="200" loading="lazy">
+                    <h3>Cuidado del Césped</h3>
+                    <p>Servicios expertos de mantenimiento, fertilización y renovación de césped</p>
+                    <a href="services-es.html#lawn-care" class="service-link">Más Información</a>
+                </div>
+                <div class="service-card" data-animate>
+                    <img src="images/service5.jpg" alt="Sistemas de Riego" width="300" height="200" loading="lazy">
+                    <h3>Sistemas de Riego</h3>
+                    <p>Soluciones inteligentes de riego para una gestión eficiente del agua</p>
+                    <a href="services-es.html#irrigation" class="service-link">Más Información</a>
+                </div>
+                <div class="service-card" data-animate>
+                    <img src="images/service6.jpg" alt="Otros Servicios" width="300" height="200" loading="lazy">
+                    <h3>Otros Servicios</h3>
+                    <p>Incluyendo cocinas al aire libre, iluminación de paisajes, piscinas y elementos acuáticos</p>
+                    <a href="services-es.html#other-services" class="service-link">Más Información</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <h2>Proyectos Destacados</h2>
+            <div class="portfolio-grid">
+                <!-- Display gallery images without descriptions -->
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery1.jpg" alt="Proyecto de Paisajismo" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery2.jpg" alt="Proyecto de Paisajismo" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery3.jpg" alt="Proyecto de Paisajismo" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery4.jpg" alt="Proyecto de Paisajismo" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery5.jpg" alt="Proyecto de Paisajismo" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery6.jpg" alt="Proyecto de Paisajismo" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery7.jpg" alt="Proyecto de Paisajismo" width="400" height="300" loading="lazy">
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <img src="images/gallery/gallery8.jpg" alt="Proyecto de Paisajismo" width="400" height="300" loading="lazy">
+                </div>
+            </div>
+            <div class="portfolio-cta">
+                <a href="gallery-es.html" class="cta-button">Ver Todos los Proyectos</a>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>¿Listo Para Transformar Su Espacio?</h2>
+                <p>Contáctenos hoy para una consulta y presupuesto gratuitos</p>
+                <a href="contact-es.html" class="cta-button">Comenzar</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Jacob's Landscaping</h3>
+                <p>Experiencia profesional en paisajismo desde 2015</p>
+            </div>
+            <div class="footer-section">
+                <h3>Información de Contacto</h3>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:7818884413">(781) 888-4413</a></p>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@jacobs-landscaping.com">info@jacobs-landscaping.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61561365051942" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Jacob's Landscaping. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+    <script src="js/language-switcher.js" defer></script>
+</body>
+</html> 
