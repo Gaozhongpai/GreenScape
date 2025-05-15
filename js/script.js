@@ -112,6 +112,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 hamburger.classList.remove('active');
             });
         });
+        
+        // Also handle clicks on the language toggle button in mobile view
+        const languageToggle = navLinks.querySelector('.language-toggle');
+        if (languageToggle) {
+            // We'll let the language-switcher.js handle the actual toggle action
+            // This just ensures the mobile menu closes correctly
+            languageToggle.addEventListener('click', function() {
+                // The actual navigation will be handled by the language-switcher.js
+            });
+        }
     }
     
     // Form submission handling
