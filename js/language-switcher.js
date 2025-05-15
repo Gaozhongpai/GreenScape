@@ -10,14 +10,25 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             
             // Get current page path
-            const currentPath = window.location.pathname;
+            let currentPath = window.location.pathname;
             let newPath;
             
-            // Check if path ends with -es.html (Spanish)
-            if (currentPath.endsWith('-es.html')) {
+            // Handle root URL case
+            if (currentPath === '/' || currentPath === '') {
+                // We're at the root URL, redirect to index-es.html
+                newPath = '/index-es.html';
+            }
+            // Handle index.html case
+            else if (currentPath === '/index.html') {
+                newPath = '/index-es.html';
+            }
+            // Normal -es.html case
+            else if (currentPath.endsWith('-es.html')) {
                 // Switch to English
                 newPath = currentPath.replace('-es.html', '.html');
-            } else {
+            } 
+            // Normal .html case
+            else {
                 // Switch to Spanish
                 newPath = currentPath.replace('.html', '-es.html');
             }
